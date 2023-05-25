@@ -38,10 +38,7 @@ order by total desc
 limit 1
 
 
-
-
-
-Q1: Write query to return the email, first name, last name, & Genre
+Q6: Write query to return the email, first name, last name, & Genre
 of all Rock Music listeners. Return your list ordered alphabetically
 by email starting with A
 
@@ -56,7 +53,7 @@ WHERE genre.name LIKE 'Rock'
 )
 ORDER BY email;
 
-Q2: Let's invite the artists who have written the most rock music in
+Q7 : Let's invite the artists who have written the most rock music in
 our dataset. Write a query that returns the Artist name and total
 track count of the top 10 rock bands
 
@@ -71,7 +68,7 @@ ORDER BY number_of_songs DESC
 LIMIT 10;
 
 
-Q3: Return all the track names that have a song length longer than
+Q8 : Return all the track names that have a song length longer than
 the average song length. Return the Name and Milliseconds for
 each track. Order by the song length with the longest songs listed
 first.
@@ -83,7 +80,7 @@ SELECT AVG (milliseconds) AS avg_track_length
 FROM track)
 ORDER BY milliseconds DESC;
 
-Q1: Find how much amount spent by each customer on artists? Write a
+Q9 : Find how much amount spent by each customer on artists? Write a
 query to return customer name, artist name and total spent
 
 WITH best_selling_artist AS (
@@ -108,7 +105,7 @@ JOIN best_selling_artist bsa ON bsa.artist_id = alb.artist_id
 GROUP BY 1,2,3,4
 ORDER BY 5 DESC;
 
-Q2: We want to find out the most popular music Genre for each country.
+Q10 : We want to find out the most popular music Genre for each country.
 We determine the most popular genre as the genre with the highest
 amount of purchases. Write a query that returns each country along with
 the top Genre. For countries where the maximum number of purchases
@@ -137,7 +134,7 @@ WHERE sales_per_country. purchases_per_genre = max_genre_per_country.max_genre_n
 
 
 
-Q3: Write a query that determines the customer that has spent the most
+Q11 : Write a query that determines the customer that has spent the most
 on music for each country. Write a query that returns the country along
 with the top customer and how much they spent. For countries where
 the top amount spent is shared, provide all customers who spent this
